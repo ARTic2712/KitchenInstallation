@@ -1,9 +1,8 @@
-﻿namespace KitchenInstallation.Extensions
+﻿namespace KitchenInstallation.Api.Extensions
 {
     using System;
     using System.Reflection;
     using Microsoft.AspNetCore.Http;
-    using Microsoft.AspNetCore.Mvc.Formatters;
     using Microsoft.AspNetCore.Mvc.Infrastructure;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
@@ -15,12 +14,7 @@
 
         public static IServiceCollection AddCommonMvc(this IServiceCollection services)
         {
-            services.AddMvc(
-                options =>
-                {
-                    options.InputFormatters.Add(new XmlSerializerInputFormatter(options));
-                    options.OutputFormatters.Add(new XmlSerializerOutputFormatter());
-                });
+            services.AddMvc();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
@@ -56,6 +50,8 @@
 
         public static IServiceCollection RegisterServices(this IServiceCollection services)
         {
+            services.AddSingleton<ApplicationLifetimeHandler>();
+
             return services;
         }
     }

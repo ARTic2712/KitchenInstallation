@@ -1,4 +1,4 @@
-﻿namespace KitchenInstallation.Extensions
+﻿namespace KitchenInstallation.Api.Extensions
 {
     using System.Reflection;
     using Microsoft.AspNetCore.Builder;
