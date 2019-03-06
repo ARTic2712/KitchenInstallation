@@ -4,4 +4,14 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KitchenInstallation.Entities\KitchenInstallation.Entities.csproj" />
+    <ProjectReference Include="..\KitchenInstallation.Infrastructure\KitchenInstallation.Infrastructure.csproj" />
+    <ProjectReference Include="..\KitchenInstallation.Interfaces\KitchenInstallation.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -10,9 +10,9 @@
 
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IHostingEnvironment env)
         {
-            Configuration = configuration;
+            Configuration = ApiConfigurationBuilder.Build(env.ContentRootPath, env.EnvironmentName);
         }
 
         public IConfiguration Configuration { get; }
@@ -21,7 +21,6 @@
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
-
             services
                 .AddCommonMvc()
                 .AddOptions()

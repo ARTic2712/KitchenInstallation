@@ -3,18 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KitchenInstallation.Api", "KitchenInstallation\KitchenInstallation.Api.csproj", "{3E937F8E-BDA0-41E8-9AD2-93D0057F6331}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KitchenInstallation.Api", "KitchenInstallation\KitchenInstallation.Api.csproj", "{3E937F8E-BDA0-41E8-9AD2-93D0057F6331}"
 	ProjectSection(ProjectDependencies) = postProject
 		{7D681F93-1FF0-4C15-9FD4-3DA42E75243B} = {7D681F93-1FF0-4C15-9FD4-3DA42E75243B}
 		{5919E2AF-EB24-4199-AE0A-F66F284CEAD7} = {5919E2AF-EB24-4199-AE0A-F66F284CEAD7}
 		{FB709ADE-F392-4D77-A462-97CCA7BAB889} = {FB709ADE-F392-4D77-A462-97CCA7BAB889}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KitchenInstallation.Business", "KitchenInstallation.Business\KitchenInstallation.Business.csproj", "{7D681F93-1FF0-4C15-9FD4-3DA42E75243B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KitchenInstallation.Business", "KitchenInstallation.Business\KitchenInstallation.Business.csproj", "{7D681F93-1FF0-4C15-9FD4-3DA42E75243B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KitchenInstallation.Infrastructure", "KitchenInstallation.Infrastructure\KitchenInstallation.Infrastructure.csproj", "{5919E2AF-EB24-4199-AE0A-F66F284CEAD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KitchenInstallation.Infrastructure", "KitchenInstallation.Infrastructure\KitchenInstallation.Infrastructure.csproj", "{5919E2AF-EB24-4199-AE0A-F66F284CEAD7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{697FAE21-1601-4E10-8CE8-2FE3D8D412D1} = {697FAE21-1601-4E10-8CE8-2FE3D8D412D1}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KitchenInstallation.Contracts", "KitchenInstallation.Contracts\KitchenInstallation.Contracts.csproj", "{FB709ADE-F392-4D77-A462-97CCA7BAB889}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KitchenInstallation.Contracts", "KitchenInstallation.Contracts\KitchenInstallation.Contracts.csproj", "{FB709ADE-F392-4D77-A462-97CCA7BAB889}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KitchenInstallation.Entities", "KitchenInstallation.Entities\KitchenInstallation.Entities.csproj", "{697FAE21-1601-4E10-8CE8-2FE3D8D412D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KitchenInstallation.Interfaces", "KitchenInstallation.Interfaces\KitchenInstallation.Interfaces.csproj", "{750AB5A8-B8EC-4501-A086-E4BEDC1E1ED8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +45,14 @@ Global
 		{FB709ADE-F392-4D77-A462-97CCA7BAB889}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB709ADE-F392-4D77-A462-97CCA7BAB889}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB709ADE-F392-4D77-A462-97CCA7BAB889}.Release|Any CPU.Build.0 = Release|Any CPU
+		{697FAE21-1601-4E10-8CE8-2FE3D8D412D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{697FAE21-1601-4E10-8CE8-2FE3D8D412D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{697FAE21-1601-4E10-8CE8-2FE3D8D412D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{697FAE21-1601-4E10-8CE8-2FE3D8D412D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{750AB5A8-B8EC-4501-A086-E4BEDC1E1ED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{750AB5A8-B8EC-4501-A086-E4BEDC1E1ED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{750AB5A8-B8EC-4501-A086-E4BEDC1E1ED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{750AB5A8-B8EC-4501-A086-E4BEDC1E1ED8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

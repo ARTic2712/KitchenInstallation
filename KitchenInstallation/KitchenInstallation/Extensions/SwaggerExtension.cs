@@ -8,12 +8,12 @@
         /// <summary>
         ///     Swagger JSON endpoint start path
         /// </summary>
-        public const string SwaggerJSONRoute = "swagger";
+        private const string SwaggerJSONRoute = "swagger";
 
         /// <summary>
         ///     Route to Swagger UI.
         /// </summary>
-        public const string SwaggerUIRoute = "api-reference";
+        private const string SwaggerUIRoute = "api-reference";
 
         public static IApplicationBuilder UseSwaggerWithUI(this IApplicationBuilder appBuilder, Assembly assembly)
         {

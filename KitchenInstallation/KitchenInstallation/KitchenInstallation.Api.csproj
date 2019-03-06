@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>8f3d3398-85e0-48e3-b6d0-54a0393bd424</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,6 +31,7 @@
   <ItemGroup>
     <ProjectReference Include="..\KitchenInstallation.Business\KitchenInstallation.Business.csproj" />
     <ProjectReference Include="..\KitchenInstallation.Contracts\KitchenInstallation.Contracts.csproj" />
+    <ProjectReference Include="..\KitchenInstallation.Entities\KitchenInstallation.Entities.csproj" />
     <ProjectReference Include="..\KitchenInstallation.Infrastructure\KitchenInstallation.Infrastructure.csproj" />
   </ItemGroup>
 

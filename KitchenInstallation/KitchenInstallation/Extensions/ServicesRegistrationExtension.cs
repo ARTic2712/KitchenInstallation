@@ -2,8 +2,12 @@
 {
     using System;
     using System.Reflection;
+    using Business.KitchenManagement;
+    using Infrastructure.Azure;
+    using Interfaces.Business.KitchenManagement;
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc.Infrastructure;
+    using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Swashbuckle.AspNetCore.Swagger;
@@ -25,7 +29,10 @@
         public static IServiceCollection AddApiCommonOptions(this IServiceCollection services,
             IConfiguration configuration)
         {
+            string connection = configuration.GetConnectionString("DefaultConnection");
 
+            services.AddDbContext<ApplicationContext>(options =>
+                options.UseSqlServer(connection));
             return services;
         }
 
@@ -51,6 +58,8 @@
         public static IServiceCollection RegisterServices(this IServiceCollection services)
         {
             services.AddSingleton<ApplicationLifetimeHandler>();
+
+            services.AddScoped<ITabletopManager, TabletopManager>();
 
             return services;
         }
